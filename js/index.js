@@ -31,5 +31,18 @@ do {
 
         const productoEncontrado = productos.find(producto => producto.nombre.toLowerCase() === nombreProducto.toLowerCase());
 
+        if (productoEncontrado && cantidad > 0) {
+            const totalParcial = productoEncontrado.precio * cantidad;
+            
+            alert(`El total pedido de este producto es: $${totalParcial}`);
+        } else {
+            alert('Por favor, ingrese un producto de la lista y una cantidad mayor a cero.');
+        }
     }
-}while();
+
+    calcularTotal();
+
+    continuar = prompt('Desea comprar otro producto? si / no');
+} while (continuar.toLowerCase() === "si");
+
+
