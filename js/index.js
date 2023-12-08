@@ -33,7 +33,7 @@ do {
 
         if (productoEncontrado && cantidad > 0) {
             const totalParcial = productoEncontrado.precio * cantidad;
-            
+            totalPedido += totalParcial;
             alert(`El total pedido de este producto es: $${totalParcial}`);
         } else {
             alert('Por favor, ingrese un producto de la lista y una cantidad mayor a cero.');
@@ -45,4 +45,5 @@ do {
     continuar = prompt('Desea comprar otro producto? si / no');
 } while (continuar.toLowerCase() === "si");
 
+alert(`El total de su pedido es: $${totalPedido}`);
 
