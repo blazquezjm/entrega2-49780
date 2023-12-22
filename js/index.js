@@ -21,3 +21,21 @@ function agregarAlCarrito(nombre, precio, inputId) {
         alert('Por favor, ingrese una cantidad válida mayor a cero.');
     }
 }
+
+function actualizarCarrito() {
+    const listaCarrito = document.getElementById('listaCarrito');
+    const totalElemento = document.getElementById('total');
+
+    // Limpiar la lista antes de actualizar
+    listaCarrito.innerHTML = '';
+
+    // Actualizar la lista del carrito
+    carrito.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.nombre} - Cantidad: ${item.cantidad} - Total: $${item.totalParcial.toFixed(2)}`;
+        listaCarrito.appendChild(listItem);
+    });
+
+    // Actualizar el total del pedido
+    totalElemento.textContent = `Total del pedido: $${totalPedido.toFixed(2)}`;
+}
