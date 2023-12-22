@@ -3,45 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Venta de Bebidas</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
     <header>
 
     </header>
-    <body>
-        
-        <h1>VENTA DE BEBIDAS</h1>
-        <section>
-            <div>
-                <h2>producto1</h2>
-                <p>descripción</p>
-                <button>AGREGAR</button>
-            </div>
-            <div>
-                <h2>producto2</h2>
-                <p>descripción</p>
-                <button>AGREGAR</button>
-            </div>
-            <div>
-                <h2>producto3</h2>
-                <p>descripción</p>
-                <button>AGREGAR</button>
-            </div>
-            <div>
-                <h2>producto4</h2>
-                <p>descripción</p>
-                <button>AGREGAR</button>
-            </div>
-            <div>
-                <h2>producto5</h2>
-                <p>descripción</p>
-                <button>AGREGAR</button>
-            </div>
-        </section>
-    </body>
+    
+    <h1>VENTA DE BEBIDAS</h1>
+    
+    <section>
+        <div class="producto-card" id="producto1">
+            <h2>Cerveza</h2>
+            <p>La fresca del verano</p>
+            <p>Precio: $1000</p>
+            <label for="cantidad_producto1">Cantidad:</label>
+            <input type="number" id="cantidad_producto1" placeholder="Ingrese la cantidad">
+            <button onclick="agregarAlCarrito('Cerveza', 1000, 'cantidad_producto1')">AGREGAR</button>
+        </div>
+
+        <div class="producto-card" id="producto2">
+            <h2>Fernet</h2>
+            <p>El clásico cordobés</p>
+            <p>Precio: $2000</p>
+            <label for="cantidad_producto2">Cantidad:</label>
+            <input type="number" id="cantidad_producto2" placeholder="Ingrese la cantidad">
+            <button onclick="agregarAlCarrito('Fernet', 2000, 'cantidad_producto2')">AGREGAR</button>
+        </div>
+
+        <div class="producto-card" id="producto3">
+            <h2>Gin</h2>
+            <p>El que tomaba Luca</p>
+            <p>Precio: $3500</p>
+            <label for="cantidad_producto3">Cantidad:</label>
+            <input type="number" id="cantidad_producto3" placeholder="Ingrese la cantidad">
+            <button onclick="agregarAlCarrito('Gin', 3500, 'cantidad_producto3')">AGREGAR</button>
+        </div>
+
+        <div class="producto-card" id="producto4">
+            <h2>Whisky</h2>
+            <p>Un elisir</p>
+            <p>Precio: $5000</p>
+            <label for="cantidad_producto4">Cantidad:</label>
+            <input type="number" id="cantidad_producto4" placeholder="Ingrese la cantidad">
+            <button onclick="agregarAlCarrito('Whisky', 5000, 'cantidad_producto4')">AGREGAR</button>
+        </div>
+
+        <div class="producto-card" id="producto5">
+            <h2>Ron</h2>
+            <p>El de los pirata</p>
+            <p>Precio: $4000</p>
+            <label for="cantidad_producto5">Cantidad:</label>
+            <input type="number" id="cantidad_producto5" placeholder="Ingrese la cantidad">
+            <button onclick="agregarAlCarrito('Ron', 4000, 'cantidad_producto5')">AGREGAR</button>
+        </div>
+
+
+    </section>
+
+    <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="listaCarrito"></ul>
+        <p>Total del pedido: $<span id="total"></span></p>
+    </div>
+
     <footer>
-        
+
     </footer>
 
     <script src="./js/index.js"></script>
